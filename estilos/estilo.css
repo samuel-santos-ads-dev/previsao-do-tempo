@@ -7,6 +7,8 @@
     --branco: #f8f8f8;
     --preto: #000000;
     --pretofosco: #7c7c7c2b;
+    --tempmin: rgb(26, 255, 0);
+    --tempmax: rgb(255, 55, 0);
 }
 
 * {
@@ -22,7 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/midias/rio.jpg");
+    background-image: url("https://picsum.photos/1080/1080");
     background-size: cover;
 }
 
@@ -88,6 +90,16 @@ abbr {
     margin-top: 16px;
 }
 
+.tempmin {
+    color: var(--tempmin);
+    font-size: 1em;
+}
+
+.tempmax {
+    color: var(--tempmax);
+    font-size: 1em;
+}
+
 .caixamenor {
     display: flex;
     align-items: center;
@@ -98,6 +110,7 @@ abbr {
     color: var(--branco);
     margin-left: 16px;
     font-size: 1.1em;
+    text-transform: capitalize;
 }
 
 #umidade {
@@ -127,6 +140,9 @@ footer a:hover {
 }
 
 @media  screen and (max-width: 320px){
+    body{
+        background-image: url("https://picsum.photos/320/480");
+    }
     main {
         text-align: center;
     }
