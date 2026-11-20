@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+:root{
+    --fontgoogle: "Google Sans", sans-serif;
+    --branco: #f8f8f8;
+    --preto: #000000;
+    --pretofosco: #7c7c7c2b;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--fontgoogle), sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/midias/rio.jpg");
+    background-size: cover;
+}
+
+abbr {
+    text-decoration: none
+}
+
+.conteiner {
+    background-color: var(--preto);
+    opacity: 0.8;
+    border-radius: 25px;
+    padding: 20px;
+    width: 95%;
+    max-width: 500px;
+}
+
+#cidade {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    background-color: var(--pretofosco);
+    color: var(--branco);
+    width: calc(100% - 80px);
+}
+
+.botaobuscar {
+    border: none;
+    outline: none;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: var(--pretofosco);
+    float: right;
+    cursor: pointer;
+}
+
+
+.lupabuscar {
+    width: 29px;
+    fill: var(--branco);
+    opacity: 0.6;
+    transition: all ease 200ms;
+}
+
+.lupabuscar:hover {
+    opacity: 1;
+}
+
+.caixamaior{
+    margin-top: 20px;
+}
+
+#titulolocal {
+    color: var(--branco);
+    font-size: 1.8em;
+    font-weight: 400;
+}
+
+#temperatura {
+    color: var(--branco);
+    font-size: 1.4em;
+    margin-top: 16px;
+}
+
+.caixamenor {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+#textoprevisao {
+    color: var(--branco);
+    margin-left: 16px;
+    font-size: 1.1em;
+}
+
+#umidade {
+    color: var(--branco);
+    font-size: 1.1em;
+    margin-top: 16px;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.091);
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: lawngreen;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: all 300ms;
+}
+
+footer a:hover {
+    opacity: 1;
+}
+
+@media  screen and (max-width: 320px){
+    main {
+        text-align: center;
+    }
+    .caixamenor {
+        justify-content: center;
+        margin-left: -32px;
+    }
+    #textoprevisao {
+        margin-left: 2px;
+    }
+}
